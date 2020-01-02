@@ -29,4 +29,6 @@ public interface StudentMapper {
 
 	@Select("select * from student limit #{currentPage},#{pageSize}")
 	public List<Student> queryByPage(@Param("start") int start, @Param("pageSize") int pageSize);
+
+	public void addMore(List<Student> list);
 }
